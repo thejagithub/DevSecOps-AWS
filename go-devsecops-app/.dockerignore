@@ -1,0 +1,28 @@
+# Version control
+.git
+.gitignore
+
+# Development and build artifacts
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode
+.idea
+*.iml
+
+# Go specific
+bin/
+vendor/
+*.sum
+
+# Build output
+dist/
+build/
+
+# Miscellaneous
+README.md
+.env
+.env.local
+.dockerignore
+Dockerfile
