@@ -68,7 +68,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Semgrep
-        run: semgrep scan --config=auto --lang=go --error .
+        run: semgrep scan --config=auto --error .
 
   # ────────────────────────────────────────────────
   # STAGE 4: Snyk — SCA on go.mod dependencies
