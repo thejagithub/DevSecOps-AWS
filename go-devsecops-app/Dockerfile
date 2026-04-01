@@ -17,22 +17,23 @@ COPY main.go main.go
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app main.go
 
 # Stage 2: Create minimal runtime image
-FROM scratch
+FROM alpine:3.19
 
 # Copy ca-certificates from builder
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
+# Create non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
 # Copy binary from builder
 COPY --from=builder /app/app /app
 
-# Create a non-root user (numeric ID for scratch image)
-USER 1000
+# Switch to non-root user
+USER appuser
 
 # Expose port
 EXPOSE 8080
 
-# Set environment variable
 ENV APP_PORT=8080
 
-# Run the application
 ENTRYPOINT ["/app"]
