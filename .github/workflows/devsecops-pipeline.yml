@@ -160,8 +160,8 @@ jobs:
     needs: trivy
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
-    id-token: write
-    contents: read
+      id-token: write
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
