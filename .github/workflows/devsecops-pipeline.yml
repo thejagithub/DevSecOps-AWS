@@ -198,7 +198,8 @@ jobs:
         run: |
           aws ecs describe-task-definition \
             --task-definition go-devsecops-task \
-            --query taskDefinition > task-definition.json
+            --query taskDefinition \
+          | jq 'del(.enableFaultInjection)' > task-definition.json
 
       - name: Update ECS task definition with new image
         id: task-def
