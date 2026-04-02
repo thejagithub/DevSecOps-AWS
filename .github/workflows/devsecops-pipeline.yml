@@ -11,7 +11,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: go-devsecops-application
-  ECS_CLUSTER: go-devsecops-cluster
+  ECS_CLUSTER: go-devsecops-cluster1
   ECS_SERVICE: go-devsecops-service
   CONTAINER_NAME: go-devsecops-app
 
