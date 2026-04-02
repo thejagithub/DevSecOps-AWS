@@ -1,4 +1,18 @@
 # 🔐 Secure CI/CD Pipeline with Integrated DevSecOps Practices
+![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Amazon ECS](https://img.shields.io/badge/Amazon%20ECS-FF9900?logo=amazon-ecs&logoColor=white)
+![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-FF9900?logo=amazon-aws&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazon-aws&logoColor=white)
+![Semgrep](https://img.shields.io/badge/Semgrep-1B2D3E?logo=semgrep&logoColor=white)
+![Snyk](https://img.shields.io/badge/Snyk-4C4A73?logo=snyk&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?logo=aqua&logoColor=white)
+![Gitleaks](https://img.shields.io/badge/Gitleaks-000000?logo=git&logoColor=white)
+![TruffleHog](https://img.shields.io/badge/TruffleHog-8B0000?logo=git&logoColor=white)
+![YAML](https://img.shields.io/badge/Config-YAML-yellow)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-Active-brightgreen)
 
 This project implements an end-to-end DevSecOps pipeline for a Go REST API, shifting security left by embedding automated security validation at every stage of the CI/CD workflow. The application is containerized with Docker, scanned for vulnerabilities, pushed to Amazon ECR, and deployed to AWS ECS Fargate — all through GitHub Actions.
 
@@ -19,7 +33,6 @@ This project implements an end-to-end DevSecOps pipeline for a Go REST API, shif
 | Deployment | Amazon ECS Fargate |
 | Networking | AWS VPC, ALB, NAT Gateway |
 | Authentication | AWS OIDC (no static keys) |
-| Monitoring | Amazon CloudWatch |
 | Version Control | GitHub |
 
 ---
@@ -41,8 +54,6 @@ go-devsecops-app/
 ---
 
 ## 🏗️ Architecture
-
-> Add your architecture diagram here (draw.io export)
 
 ```
 GitHub Push
